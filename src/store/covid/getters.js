@@ -76,3 +76,31 @@ export function getHospitalSuspect(state) {
 export function getCompletedSuspect(state) {
     return state.suspect[3];
 }
+
+export function getTotal(state) {
+    var totalCases = state.lineData.map((lineD) => {
+        return lineD.totalCases;
+    });
+    return totalCases.reduce((a, b) => a + b, 0)
+}
+
+export function getTotalHospital(state) {
+    var totalHospital = state.lineData.map((lineD) => {
+        return lineD.totalInHospital;
+    });
+    return totalHospital.reduce((a, b) => a + b, 0)
+}
+
+export function getTotalRecovered(state) {
+    var totalRecovered = state.lineData.map((lineD) => {
+        return lineD.totalRecovered;
+    });
+    return totalRecovered.reduce((a, b) => a + b, 0)
+}
+
+export function getTotalDeceased(state) {
+    var totalDeceased = state.lineData.map((lineD) => {
+        return lineD.totalDeceased;
+    });
+    return totalDeceased.reduce((a, b) => a + b, 0)
+}

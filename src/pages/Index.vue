@@ -2,16 +2,16 @@
   <div class="page_container">
     <div class="top_cards">
       <div class="top_indiv_card">
-        <Card title="Total" :number="12" bgcolor="#eb5757" icon="/statics/cases.svg" />
+        <Card title="Total" :number="getTotal" bgcolor="#eb5757" icon="/statics/cases.svg" />
       </div>
       <div class="top_indiv_card">
-        <Card title="In Hospital" :number="12" bgcolor="#f4b400" icon="/statics/hospital.svg" />
+        <Card title="In Hospital" :number="getTotalHospital" bgcolor="#f4b400" icon="/statics/hospital.svg" />
       </div>
       <div class="top_indiv_card">
-        <Card title="Recovered" :number="12" bgcolor="#0b9d58" icon="/statics/recovered.svg" />
+        <Card title="Recovered" :number="getTotalRecovered" bgcolor="#0b9d58" icon="/statics/recovered.svg" />
       </div>
       <div class="top_indiv_card">
-        <Card title="Deceased" :number="12" bgcolor="#4185f4" icon="/statics/deceased.svg" />
+        <Card title="Deceased" :number="getTotalDeceased" bgcolor="#4185f4" icon="/statics/deceased.svg" />
       </div>
     </div>
     <div class="timeline">
@@ -107,7 +107,11 @@ export default {
       "getTotalSuspect",
       "getHomeSuspect",
       "getHospitalSuspect",
-      "getCompletedSuspect"
+      "getCompletedSuspect",
+      "getTotal",
+      "getTotalHospital",
+      "getTotalRecovered",
+      "getTotalDeceased"
     ])
   },
   methods: {
